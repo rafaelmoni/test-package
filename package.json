@@ -1,0 +1,20 @@
+{
+  "name": "@rafaelmoni/test-package",
+  "version": "0.0.1",
+  "description": "Test package publish purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Rafael Moni",
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0",
+    "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2"
+  }
+}
