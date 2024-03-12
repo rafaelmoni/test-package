@@ -6,6 +6,8 @@
   "scripts": {
     "prepublish": "npm run build",
     "test": "npm test",
+    "prebuild": "rm -rf dist",
+    "prebuild:dev": "rm -rf dist",
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "build:w": "npm run build:dev --watch"
@@ -13,6 +15,7 @@
   "author": "Rafael Moni",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.17.21",
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
     "typescript": "^5.4.2"

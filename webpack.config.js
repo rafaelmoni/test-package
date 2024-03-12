@@ -3,10 +3,21 @@ const path = require('path')
 const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: {
+    index: {
+      import: './src/index.ts',
+      dependOn: ['reducers', 'interactiveMap'],
+    },
+    reducers: {
+      import: './src/reducers.ts',
+    },
+    interactiveMap: {
+      import: './src/useInteractive.ts',
+    },
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js',
+    filename: '[name].js',
     chunkFilename: '[name].bundle.js',
     publicPath: isProduction ? '/dist/' : '/',
     libraryTarget: 'commonjs2',
