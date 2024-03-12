@@ -19,6 +19,7 @@ export const homeInteractive: HomeInteractive<Interactives> = (
     attributes: {
       slides: interactiveState.state.banners.slides,
       isLoading: interactiveState.state.banners.isLoading,
+      onClick: () => alert('Clickado'),
     },
   },
 })

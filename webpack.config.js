@@ -4,10 +4,6 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
   entry: {
-    index: {
-      import: './src/index.ts',
-      dependOn: ['reducers', 'interactiveMap'],
-    },
     reducers: {
       import: './src/reducers.ts',
     },
